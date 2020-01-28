@@ -14,7 +14,6 @@ provider:
         - dynamodb:GetItem
       Resource:
         - "arn:aws:dynamodb:us-east-2:*:table/customer"
-
 functions:
   get:
     handler: handlers/index.handler

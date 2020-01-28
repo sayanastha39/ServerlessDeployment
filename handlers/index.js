@@ -13,13 +13,11 @@ exports.handler = async (event, context) => {
   let statusCode = 0;
 
   const { id } = event.pathParameters;
-
   const params = {
     TableName: "customer",
     Key: {
       id: id
-    }
-  }
+    }}
 
   try {
     const data = await documentClient.get(params).promise();
