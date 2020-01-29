@@ -2,7 +2,7 @@ const chai  = require('chai');
 const expect = chai.expect;
 const get = require('../handlers/index');
  
-describe('Get customr details', () => {
+describe('Get customer details', () => {
  
     it('Should return a customer details that matches the provided id', (done) => {
 
