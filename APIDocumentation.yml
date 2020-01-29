@@ -1,0 +1,52 @@
+swagger: '2.0'
+info:
+  title: Customer Details
+  description: Customer Details using their Id
+  version: 1.0.0
+
+tags:
+- name: customer
+  description: Operations with customer
+  
+paths:
+  /customer/{id}:
+    get:
+      tags:
+      - customer
+      summary: display customers detail
+      operationId: get
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: id
+        type: string
+        required: true
+        description: Id of the customer
+     
+      responses:
+        200:
+          description: OK
+        404:
+          description: Invalid input
+definitions:
+  customer:
+    type: object
+    properties:
+      id:
+        type: string
+      firstname:
+        type: string
+      lastname:
+        type: string
+      address:
+        type: string
+      email:
+        type: string 
+ 
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /sayanastha39/Challenge1/1.0.0
+schemes:
+ - https
+ - http
